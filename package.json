@@ -1,0 +1,21 @@
+{
+  "name": "urlshortner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "india-state-codes": "^1.0.1",
+    "moment": "^2.29.1",
+    "netlify-lambda": "^2.0.14",
+    "node-fetch": "^2.6.1",
+    "number-to-text": "^0.3.8",
+    "serverless-http": "^2.7.0"
+  }
+}
