@@ -9,18 +9,11 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik" rel="stylesheet">
     <link rel="icon"
         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREV5K3DyYLmK69qoISGBCsDmPfgGpe7bNY5MPK1b41H3CyMGO60afWCJ1yY_Uqj5ZDef0&usqp=CAU"
         type="image/x-icon">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+
     <style>
         p {
             font-size: 20px;
@@ -36,14 +29,11 @@
 
         .container-fluid {
             padding-top: 100px;
-            /* padding-bottom: 200px; */
         }
 
         .footer {
-            position: fixed;
             text-align: center;
-            bottom: 0px;
-            width: 70%;
+            padding-top: 200px;
             font-weight: bold;
             font-size: 20px;
         }
@@ -53,7 +43,7 @@
         }
 
         .card-text {
-            font-family: Montserrat, sans-serif;
+            font-family: Rubik, sans-serif;
             text-align: left;
         }
 
@@ -70,17 +60,15 @@
 
     <div class="container-fluid bg-2 text-center">
         <p class="margin">COVID-19 API — DOCUMENTATION</p>
-        <!-- <a href="/docs">
-            <button type="button" class="btn btn-primary btn-lg">Back to Home</button>
-        </a> -->
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
                             <p class="card-title">/api/all</p>
-                            <p class="card-text">Returns JSON data with data about all the states.<br><br>
-                                <a href="/api/all" target="_blank" style="text-align: left;">Jump to
+                            <p class="card-text">Returns JSON object with data about all the states.<br><br>
+                                <a href="/api/all" target="_blank"
+                                    style="text-align: left; font-family: Rubik, sans-serif;">Jump to
                                     endpoint</a>
                             </p>
                         </div>
@@ -90,26 +78,16 @@
                     <div class="card">
                         <div class="card-body">
                             <p class="card-title">/api/{state}</p>
-                            <p class="card-text">Returns JSON data with data about the specified Indian state.<br><br>
-                            <p style="text-align: left;"><a href="/api/kerala" target="_blank">Jump to endpoint</a>
+                            <p class="card-text">Returns JSON object with data about the specified Indian state.<br><br>
+                            <p style="text-align: left;"> <a href="/api/all" target="_blank"
+                                    style="text-align: left; font-family: Rubik, sans-serif;">Jump to
+                                    endpoint</a>
                                 (Example state:
                                 Kerala)</p>
                             </p>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="card-title">/api/sort/{type}</p>
-                            <p class="card-text">Returns JSON data with data about the specified Indian state.<br><br>
-                            <p style="text-align: left;"><a href="/api/kerala" target="_blank">Jump to endpoint</a>
-                                (Example state:
-                                Kerala)</p>
-                            </p>
-                        </div>
-                    </div>
-                </div> -->
             </div>
             <p class="footer">
                 <a href="/">Back to Home</a>
