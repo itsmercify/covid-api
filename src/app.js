@@ -1,5 +1,11 @@
 const app = require("express")();
 const { restructuredData } = require("./API/restructuredData");
+const path = require("path");
+const config = require("./Config/config.json");
+const docs = require("../src/Documentation/docs");
+
+app.set("views", path.join(__dirname, "./Pages"));
+app.set("view engine", "ejs");
 
 app.get("/api/:state", async (req, res) => {
   if (req.params.state === "all") {
@@ -38,17 +44,18 @@ app.get("/api/:state", async (req, res) => {
   return;
 });
 
-const path = require("path");
-
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + "/Pages" + "/main.html"));
+  res.render("main_page", {
+    config,
+  });
 });
 
 app.get("/docs", (req, res) => {
-  res.sendFile(path.join(__dirname + "/Pages" + "/docs.html"));
+  res.render("docs", {
+    docs,
+  });
 });
 
-app.listen(process.env.PORT || 3000);
-
-console.clear();
-console.log("Running!");
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Running!");
+});

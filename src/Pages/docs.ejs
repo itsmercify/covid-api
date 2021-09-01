@@ -22,7 +22,7 @@
         }
 
         .margin {
-            font-size: 50px;
+            font-size: 25px;
             margin-bottom: 0px;
             color: teal;
         }
@@ -62,32 +62,28 @@
         <p class="margin">COVID-19 API — DOCUMENTATION</p>
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="card-title">/api/all</p>
-                            <p class="card-text">Returns JSON object with data about all the states.<br><br>
-                                <a href="/api/all" target="_blank"
-                                    style="text-align: left; font-family: Rubik, sans-serif;">Jump to
-                                    endpoint</a>
-                            </p>
+                <% docs.docs.forEach(function(docs) { %>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title">
+                                    <%- docs.name %>
+                                </p>
+                                <p class="card-text">
+                                    <%- docs.description %><br><br>
+                                        <!-- <a href="<%- docs.url %>" target="_blank"
+                                        style="text-align: left; font-family: Rubik, sans-serif;">Jump to
+                                        endpoint</a> -->
+                                        <p style="text-align: left;"> <a href="<%- docs.url %>" target="_blank"
+                                                style="text-align: left; font-family: Rubik, sans-serif;">Jump to
+                                                endpoint</a>
+                                            <%- docs.message_near_hyperlink || "" %>
+                                        </p>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="card-title">/api/{state}</p>
-                            <p class="card-text">Returns JSON object with data about the specified Indian state.<br><br>
-                            <p style="text-align: left;"> <a href="/api/kerala" target="_blank"
-                                    style="text-align: left; font-family: Rubik, sans-serif;">Jump to
-                                    endpoint</a>
-                                (Example state:
-                                Kerala)</p>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                    <% }); %>
             </div>
             <p class="footer">
                 <a href="/">Back to Home</a>

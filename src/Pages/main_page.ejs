@@ -26,7 +26,7 @@
         }
 
         .container-fluid {
-            padding-top: 100px;
+            padding-top: 200px;
             padding-bottom: 100px;
         }
 
@@ -41,8 +41,8 @@
 <body>
 
     <div class="container-fluid bg-2 text-center">
-        <p class="margin">COVID-19 API</p>
-        <p>An <b>user friendly</b>, <b>easy-to-use</b> and <b>detailed</b> COVID-19 API endpoint without an API key!</p>
+        <p class="margin"><%= config.website_name %></p>
+        <p><%- config.website_description %></p>
         <a href="/docs">
             <button type="button" class="btn btn-primary btn-lg">API Documentation</button>
         </a>
